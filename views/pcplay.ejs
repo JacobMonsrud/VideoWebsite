@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>ExpressEJS</title>
+    </head>
+    <body onload="play()">
+        <h1>Pcplay</h1>
+        
+        <video id="vid" preload="auto" controls width="100%">
+            <source src="http://localhost/pcvideo" type="video/mp4">
+        
+            Sorry, your browser doesn't support embedded videos.
+        </video>
+        
+        <script>
+            function play() {
+                //alert('onload play');
+                var currentTime = parseFloat(new Date() / 1000);
+                var start = parseFloat(<%= data.startTime %>);
+                //alert(currentTime + " start: " + start);
+                if (currentTime - start > 0) {
+                    document.getElementById("vid").play();
+                } else {
+                    setTimeout(play, 1000);
+                }
+            }
+        </script>
+    </body>
+</html>

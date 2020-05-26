@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>ExpressEJS</title>
+    </head>
+    <body>
+        <h1>Mobile</h1>
+        <p>pin: <%= data.pin %> </p>
+
+        <form method="post" action="/choose/<%=data.pin%>/mobile/play">
+            <button type="submit">Play</button>
+        </form>
+
+    </body>
+</html>
