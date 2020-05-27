@@ -13,18 +13,25 @@ public class JavaClient {
             port = Integer.parseInt(portArg) + 10000;
         }
 
-        Socket connection = new Socket("localhost", port);
+        Socket connection = new Socket("188.166.39.138", port);
 
         InputStream inputStream = connection.getInputStream();
-
+	
+	int n = 2;
+	boolean b = false;
+	String time = "";
         byte[] buffer = new byte[1];
-        while (true) {
+        while (n > 0) {
             int bytesread = inputStream.read(buffer);
             if (bytesread != -1) {
-                String time = new String(buffer);
-                System.out.print(time);
-            }
+                String timeTemp = new String(buffer);
+                time += timeTemp;
+            } else {
+	    	break;
+	    }
         }
+	System.out.println(time);
+	connection.close();
 
     }
 }
