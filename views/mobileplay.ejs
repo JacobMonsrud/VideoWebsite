@@ -3,12 +3,11 @@
     <head>
         <meta charset="UTF-8">
         <title>ExpressEJS</title>
-	<link rel="preload" href="http://188.166.39.138/mobilevideo" as="video" type="video/mp4">
     </head>
     <body onload="play()">
         <h1>Mobileplay</h1>
         
-        <video id="vid" controls width="100%">
+        <video id="vid" controls preload="auto" width="100%">
             <source src="http://188.166.39.138/mobilevideo" type="video/mp4">
         
             Sorry, your browser doesn't support embedded videos.
