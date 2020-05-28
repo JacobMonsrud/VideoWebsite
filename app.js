@@ -13,6 +13,8 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 app.use('/static', express.static('node_modules'));
 
+app.use('/static', express.static(__dirname+'/views/images'));
+
 app.set('view engine','ejs');
 
 app.get('/', (req, res) => {
