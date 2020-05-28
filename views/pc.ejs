@@ -2,12 +2,14 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>ExpressEJS</title>
+        <title>Pc</title>
     </head>
-    <body>
-        <h1>Pc</h1>
-        <p>pin: <%= data.pin %> </p>
+    <body style="background-color: black;">
+        
+        <img src="pinkodeAktiv_9.png" style="width: 100%;">
 
+        <p style="color: white; font-family: Helvetica, sans-serif; font-size: 24pt; font-weight: 100; text-indent: 20px;">Din pinkode: <%= data.pin %> </p>
+        
         <form method="post" action="/choose/<%=data.pin%>/pc/play">
             <button type="submit">Play</button>
         </form>

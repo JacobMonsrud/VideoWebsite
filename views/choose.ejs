@@ -2,18 +2,22 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>ExpressEJS</title>
+        <title>Choose</title>
     </head>
-    <body>
-        <h1>Choose</h1>
-        <p>pin: <%= data.pin %> </p>
+    <body style="background-color: black;">
         
-        <form action="/choose/<%=data.pin%>/mobile/" method="POST">
-            <button type="submit">Mobil</button>
+        <img src="pinkodeAktiv_5.png" style="width: 100%;">
+        
+        <p style="color: white; font-family: Helvetica, sans-serif; font-size: 24pt; font-weight: 100; text-indent: 20px;">Din pinkode: <%= data.pin %> </p>
+
+        <form action="/choose/<%=data.pin%>/mobile/" method="POST" style="float: left;">
+            <button type="submit" style="background-color:transparent; border-color:transparent;">
+                <img src="mobile.png" style="height: 100px; width: 100px;">
+            </button>
         </form>
 
         <form action="/choose/<%=data.pin%>/pc/" method="POST">
-            <button type="submit">Pc</button>
+            <button type="submit" style="height: 100px; width: 100px; font-size: 40pt;">Pc</button>
         </form>
 
     </body>
